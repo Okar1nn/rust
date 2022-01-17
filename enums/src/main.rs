@@ -80,28 +80,48 @@
 //         Coin::Quarter => 25,
 //     }
 // }
-#[derive(Debug)]
+// #[derive(Debug)]
 
-enum UsState {
-    Alabama,
-    Alaska,
-    // --snip--
-}
+// enum UsState {
+//     Alabama,
+//     Alaska,
+//     // --snip--
+// }
 
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter(UsState),
+// enum Coin {
+//     Penny,
+//     Nickel,
+//     Dime,
+//     Quarter(UsState),
+// }
+
+// fn value_in_cents(coin: Coin) -> u8 {
+//     match coin {
+//         Coin::Penny => 1,
+//         Coin::Nickel => 5,
+//         Coin::Dime => 10,
+//         Coin::Quarter(state) => {
+//             println!("State quarter from {:?}!", state);
+//             25
+//         }
+//     }
+// }
+enum Operation{
+    Substract,
+    Add,
+    Divide,
+    Multiply
 }
-fn value_in_cents(coin: Coin) -> u8 {
-    match coin {
-        Coin::Penny => 1,
-        Coin::Nickel => 5,
-        Coin::Dime => 10,
-        Coin::Quarter(state) => {
-            println!("State quarter from {:?}!", state);
-            25
-        }
+fn main(){
+    let op = Operation::Add;
+    let result = calc(op, 5, 7);
+    println!("{}",result);
+}
+fn calc(op: Operation, x:u32, y:u32) -> u32{
+    match op{
+        Operation::Add => x + y,
+        Operation::Multiply => x * y,
+        Operation::Divide => x / y,
+        _ => 0
     }
 }

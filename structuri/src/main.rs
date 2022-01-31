@@ -1,4 +1,4 @@
-use std::mem;
+// use std::mem;
 // struct User {
 //     username: String,
 //     email: String,
@@ -177,42 +177,72 @@ use std::mem;
 //     println!("{:?}", umee);
 // }
 //-----------STRUKTURI ZADANIE------------
-#[derive(Debug)]
-struct Point{
-    x: f32,
-    y: f32,
-}
-#[allow(dead_code)]
+// #[derive(Debug)]
+// struct Point{
+//     x: f32,
+//     y: f32,
+// }
+// #[allow(dead_code)]
+// struct Rectangle{
+//     top_left: Point,
+//     bottom_right: Point,
+// }
+// fn rect_area(ploshad:&Rectangle) -> f32 {
+//     ploshad.top_left.x   * ploshad.bottom_right.y
+// }
+// fn main(){
+//     let point:Point = Point{
+//         x: 17.8,
+//         y: 3.2,
+//     };
+//     println!("koordinaty tochek x = {:?}, y = {:?}",point.x,point.y);
+//     let bottom_right = Point{
+//         x: 5.3,
+//         ..point
+//     };
+//     println!("vtoraya tochka x = {:?}, y = {:?}", bottom_right.x,bottom_right.y);
+//     let Point{
+//         x: left_edge,
+//         y: top_edge,
+//     } = point;
+//     let _rectangle = Rectangle{
+//         top_left: Point{x: left_edge, y: top_edge},
+//         bottom_right: bottom_right,
+//     };
+//     let plosh = Point{
+//         x: left_edge,
+//         y: point.y
+//     };
+//     println!("{:?}, {:?}", _rectangle.top_left, _rectangle.bottom_right);
+//     println!("{:?}", rect_area(&_rectangle));
+// }
+
 struct Rectangle{
-    top_left: Point,
-    bottom_right: Point,
+    weigth: u32,
+    heigth: u32,
 }
-fn rect_area(ploshad:&Rectangle) -> f32 {
-    ploshad.top_left.x   * ploshad.bottom_right.y
+impl Rectangle{
+    fn plosyad(&self) -> u32{
+        self.weigth * self.heigth
+     }
+     fn sravnenie(&self, drugoi:&Rectangle) -> bool{
+        self.weigth > drugoi.weigth && self.heigth > drugoi.heigth
+     }
 }
 fn main(){
-    let point:Point = Point{
-        x: 17.8,
-        y: 3.2,
+    let rect = Rectangle{
+        weigth: 50,
+        heigth: 60,
     };
-    println!("koordinaty tochek x = {:?}, y = {:?}",point.x,point.y);
-    let bottom_right = Point{
-        x: 5.3,
-        ..point
+    let rect2 = Rectangle{
+        weigth: 30,
+        heigth: 40,
     };
-    println!("vtoraya tochka x = {:?}, y = {:?}", bottom_right.x,bottom_right.y);
-    let Point{
-        x: left_edge,
-        y: top_edge,
-    } = point;
-    let _rectangle = Rectangle{
-        top_left: Point{x: left_edge, y: top_edge},
-        bottom_right: bottom_right,
+    let rect3 = Rectangle{
+        weigth: 40,
+        heigth: 80,
     };
-    let plosh = Point{
-        x: left_edge,
-        y: point.y
-    };
-    println!("{:?}, {:?}", _rectangle.top_left, _rectangle.bottom_right);
-    println!("{:?}", rect_area(&_rectangle));
+    println!("{}", rect.plosyad());
+    println!("rect bolshe rect2  - {}", rect.sravnenie(&rect2));
+    println!("rect bolshe rect3  - {}", rect.sravnenie(&rect3));
 }

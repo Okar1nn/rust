@@ -106,22 +106,33 @@
 //         }
 //     }
 // }
-enum Operation{
-    Substract,
-    Add,
-    Divide,
-    Multiply
-}
-fn main(){
-    let op = Operation::Add;
-    let result = calc(op, 5, 7);
-    println!("{}",result);
-}
-fn calc(op: Operation, x:u32, y:u32) -> u32{
-    match op{
-        Operation::Add => x + y,
-        Operation::Multiply => x * y,
-        Operation::Divide => x / y,
-        _ => 0
-    }
-}
+// enum Operation{
+//     Substract,
+//     Add,
+//     Divide,
+//     Multiply
+// }
+// fn main(){
+//     let op = Operation::Add;
+//     let result = calc(op, 5, 7);
+//     println!("{}",result);
+// }
+// fn calc(op: Operation, x:u32, y:u32) -> u32{
+//     match op{
+//         Operation::Add => x + y,
+//         Operation::Multiply => x * y,
+//         Operation::Divide => x / y,
+//         _ => 0
+//     }
+// }
+// }
+// fn main(){
+//     let number:u32 = 7;
+//     let fnumber = number as f64;
+//     match   number{
+//         1..=4 => println!("one"),
+//         5..=9 => println!("two"),
+//         10..=15 => println!("three"),
+//         _ => println!("aboba")
+//     }    
+// }

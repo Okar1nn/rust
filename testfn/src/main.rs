@@ -11,7 +11,7 @@ fn umnojenie(chislo1:u32,chislo2:u32) {
     let result = chislo1 * chislo2;
     println!("{} * {} = {}",chislo1,chislo2,result);
 }
-fn delenie(chislo1:u32,chislo2:u32){
+fn delenie(chislo1:f64,chislo2:f64){
     let result = chislo1 / chislo2;
     println!("{} / {} = {}", chislo1,chislo2,result);
 }
@@ -29,5 +29,7 @@ fn main(){
     summa(numbern1, numbern2);
     minus(numbern1, numbern2);
     umnojenie(numbern1, numbern2);
+    let numbern1:f64 = n1.trim().parse().expect("Ошибка");
+    let numbern2:f64 = n2.trim().parse().expect("Ошибка");
     delenie(numbern1, numbern2);
 }

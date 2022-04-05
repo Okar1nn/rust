@@ -1,1 +1,1 @@
-/home/okarin/Рабочий\ стол/rust/uroki/testfn/target/debug/testfn: /home/okarin/Рабочий\ стол/rust/uroki/testfn/src/main.rs
+/Users/okarin/Documents/rust/testfn/target/debug/testfn: /Users/okarin/Documents/rust/testfn/src/main.rs

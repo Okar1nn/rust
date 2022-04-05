@@ -1,1 +1,1 @@
-/home/okarin/Рабочий\ стол/rust/uroki/miniigra/target/debug/miniigra: /home/okarin/Рабочий\ стол/rust/uroki/miniigra/src/main.rs
+/Users/okarin/Documents/rust/miniigra/target/debug/miniigra: /Users/okarin/Documents/rust/miniigra/src/main.rs

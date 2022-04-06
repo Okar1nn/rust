@@ -39,14 +39,15 @@ fn calculate_length_ssila(s:&String) -> usize{
     length
 }
 
-//--------------ОТРАБОТКА------------
+// --------------ОТРАБОТКА------------
 // fn main(){
 //     let s1 = String::from("Hello");
 //     let s2 = s_vladeniem_imp(s1);
 //     println!("s2 = {}", s2);
-//     let s3 = String::from("Ssila");
+//     let mut s3 = String::from("Ssilka");
 //     let s4 = bez_vladeniya_ssilkoy(&s3);
 //     println!("stroka = {}, length = {}", s3,s4);
+//     popitka_izmenit_znachenie_po_ssilke(&mut s3);
 // }
 // fn s_vladeniem_imp(s:String) -> String{
 //     let ss1 = s + " World";
@@ -55,4 +56,8 @@ fn calculate_length_ssila(s:&String) -> usize{
 // fn bez_vladeniya_ssilkoy(s:&String) -> usize {
 //     let len = s.len();
 //     len
+// }
+// fn popitka_izmenit_znachenie_po_ssilke(s:&mut String){
+//     s.push_str(" s izmeneniem");
+//     println!("{}",s);
 // }

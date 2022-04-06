@@ -1,23 +1,17 @@
 fn main(){
-    let s1 = imp_str();
-    println!("s1 iz imp_str = {}",s1);
-    let s2 = String::from("world!");
-    println!("s2 = {}", s2);
-    let s3 = return_str(s2);
-    println!("s3 iz return_str s2 - {}", s3);
-    let s4 = return_das(s3);
-    println!("{}",s4);
+    let ctr = String::from("Hello World!");
+    println!("{}", ctr);
+    let ptr = imp_str(ctr);
+    println!("{}", ptr);
+    let rptr = return_str(ptr);
+    println!("{}",rptr);
 }
 
-fn imp_str() -> String {
-    let imp = String::from("hello");
-    imp
+fn imp_str(stroka:String) -> String{
+    let plus_stroka = stroka + "How are you?";
+    plus_stroka
 }
-fn return_str(stroka1:String) -> String {
-    stroka1 + "vsem privet"
-}
-fn return_das(stroka2:String) -> String {
-    let ab = String::from("Yellow");
-    let abc = ab + &stroka2;
-    abc
+
+fn return_str(strochka:String) -> String {
+    strochka
 }
